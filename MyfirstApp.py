@@ -6,4 +6,7 @@ cnt.header("Dashboard")
 
 my_cnx = stc.connect(**st.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-mycur.execute("select state, country from COVID19_EPIDEMIOLOGICAL_DATA.PUBLIC.DEMOGRAPHICS")
+mycur.execute("select top 100 state, county from COVID19_EPIDEMIOLOGICAL_DATA.PUBLIC.DEMOGRAPHICS")
+dr = mycur.fetchall()
+df = st.dataframe(dr)
+df
