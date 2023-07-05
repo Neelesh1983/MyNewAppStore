@@ -1,2 +1,2 @@
 charset-normalizer==2.0.12
-snowflake-connector-python==3.11.4
+snowflake-connector-python==2.7.9
