@@ -1,4 +1,4 @@
 import streamlit as st
 import snowflake.connector as sncon
 
-st.write(**st.secrets["snowflake"])
+con1 = sncon.connect(**st.secrets["snowflake"])
